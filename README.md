@@ -1,5 +1,5 @@
-1. 每次main_func只能回测一种模型
-2. 只用修改insample_train函数，添加method即可，请确保输出一致：y_test（不用改）,estimator_（模型）,estimator_train（训练集概率）,estimator_test（测试集概率）
-3. method可用简写，写完后请在main_func中添加对应的method_name（全称）
-4. 最后可用Auc_compare_all,Df_tier_ret_all将输出合并并保存csv（可以通过assign来记录参数改变）
-5. 下载数据并解压到ipynb的同一目录下,https://drive.google.com/file/d/1s86HOE65NbThUssc99r-zHgskpkhGoNH/view?usp=sharing
+1. 每次main_func可以回测多种模型，平权投票；
+2. main_func中methods以list的形式输入，k是cross-validation的次数（默认为5，但k=5的多模型回测会导致时长较长，可调低一点）；
+3. 输出的结果会储存到results中，包括每种参数下的图和以csv形式保存的全阶段的tier_ret和auc_score
+4. 下载数据并解压到py的同一目录下,https://drive.google.com/file/d/1s86HOE65NbThUssc99r-zHgskpkhGoNH/view?usp=sharing
+5. 部分results见，https://drive.google.com/file/d/183KCSz0PYOSseAUo08-mcOwznRfX6WYf/view?usp=sharing
